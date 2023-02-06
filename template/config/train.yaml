@@ -1,0 +1,22 @@
+mode: 'train' # debug or train
+
+seed: 42
+gpus: [0]
+
+model: 
+    data:
+        input: 'vacuum'
+        output: 'vacuum'
+        dimension_reduction:
+            input_n_components: 2
+            output_n_components: 2
+            min_variance_cutoff: 0.98
+        batch_size: 64
+    callbacks:
+        patience: 20
+    train:
+        criteria : 'l1' # 'l1' or 'l2'
+        lr: 0.0001
+        min_epochs: 10
+        max_epochs: 300 # 2000
+        save_top_k: 30

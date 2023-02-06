@@ -1,0 +1,5 @@
+model_name: 'vacuum-vacuum-20230117_150053'
+gpus: [0]
+
+vacuum_path: './data/vacuum.csv'
+charging_path: './data/charging.csv'
